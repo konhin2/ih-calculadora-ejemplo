@@ -1,6 +1,26 @@
 * {
     font-family: 'Arial';
 }
+
 body {
     background-color: rgb(225, 225, 225);
 }
+.button {
+    letter-spacing: 0.3px;
+    background-color:#fb3b49;
+    font-size: .875rem;
+    padding: 1.1rem 2rem;
+    color: white;
+    border-style: none;
+}
+.button2 {
+    width: 100px;
+    letter-spacing: 0.3px;
+    background-color:white;
+    color: black;
+    font-size: 1rem;
+    padding: .8rem 2.6rem;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: bold;
+} 
