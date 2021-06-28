@@ -13,6 +13,16 @@ En esta aplicación, vamos a desarrollar una calculadora
 
 -Incluir un favicon 
 
+## Características
+
+- Cuenta con una función de saludar.
+
+- Cuenta con una función sumar.
+
+## Input 
+'sumar(valorA, valorB)'
+
+- valorA ()
 ## Deployment 
 
 - El despiegue se realizo en netilfy.
