@@ -21,7 +21,7 @@ const valorD = document.getElementById("valor-d")
 const btnRestar = document.getElementById("btn-restar")
 const areaResta = document.getElementById("area-resta")
 
-
+const question = document.getElementById("question")
 /**
  * Dentro de la programación orientada a objetos, existe un concepto llamado pureza
  * La pureza de las funciones dice que debe ser lo mas independientes posibles. Sus únicos accesos están dentro de la misma función y a traves de su parámetros, no más.
@@ -52,3 +52,42 @@ btnRestar.addEventListener("click", () => {
 
     areaResta.innerHTML = resultado
 })
+question.style.color = "blue"
+
+let mice = document.getElementsByClassName("mouse")
+
+for(let i=0; i<mice.length; i++){
+    mice[i].style.color = "green"
+}
+
+mice[0].addEventListener("mouseover", () => {
+    console.log(mice)
+    mice[0].style.fontSize = "50px"
+})
+
+let divs = document.getElementsByTagName("div")
+console.log("divs:", divs)
+mice[0].className = "mouse whiteMouse"
+
+console.log(btnSaludar.id)
+
+let parrafo = document.getElementById("info-parrafo")
+console.log(parrafo)
+// Edit tags
+parrafo.setAttribute('class', 'subrayado')
+valorA.setAttribute('placeholder', 'Escribe el primer número')
+
+parrafo.removeAttribute('class')
+
+
+// Create tag
+let h2Tag = document.createElement("h2")
+
+let parent = document.getElementById('main')
+h2Tag.innerHTML = 'Soy la etiqueta creada'
+
+parent.appendChild(h2Tag)
+
+// Remove
+const deleteP =  document.getElementById('delete-p')
+parent.removeChild(deleteP)
