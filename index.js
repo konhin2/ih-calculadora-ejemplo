@@ -1,3 +1,7 @@
+import operaciones from './operaciones.js'
+// Selectores
+// query selector es un método que permite seleccionar ids o clases 
+
 // 1. Variables
 const nombre = document.getElementById("capturar-nombre")
 
@@ -17,36 +21,26 @@ const valorD = document.getElementById("valor-d")
 const btnRestar = document.getElementById("btn-restar")
 const areaResta = document.getElementById("area-resta")
 
-// 2. Funciones
-const saludar = (name) => {
-    const saludo = `Hola ${name}!!!`
-    return areaSaludo.innerHTML = saludo
-    
-}
 
 /**
  * Dentro de la programación orientada a objetos, existe un concepto llamado pureza
  * La pureza de las funciones dice que debe ser lo mas independientes posibles. Sus únicos accesos están dentro de la misma función y a traves de su parámetros, no más.
  */
 
-// Suma
-const sumar = (a, b) => a + b
-
-// Resta
-const restar = (a, b) => a - b
-
 // 3. Eventos
 // Saludo
 btnSaludar.addEventListener("click", () => {
     const nameValue = nombre.value
 
-    saludar(nameValue)
+    const resultado = operaciones.saludar(nameValue)
+
+    areaSaludo.innerHTML = resultado
 }) 
 // Suma
 btnSumar.addEventListener("click", () => {
     const inputValorA = Number(valorA.value)
     const inputValorB = Number(valorB.value)
-    const resultado = sumar(inputValorA, inputValorB)
+    const resultado = operaciones.sumar(inputValorA, inputValorB)
 
     areaSuma.innerHTML = resultado
 })
@@ -54,7 +48,7 @@ btnSumar.addEventListener("click", () => {
 btnRestar.addEventListener("click", () => {
     const inputValorA = Number(valorC.value)
     const inputValorB = Number(valorD.value)
-    const resultado = restar(inputValorA, inputValorB)
+    const resultado = operaciones.restar(inputValorA, inputValorB)
 
     areaResta.innerHTML = resultado
 })
